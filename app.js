@@ -34,6 +34,11 @@ app.get('/loading', (req, res) => {
   });
 });
 app.get('/', (req, res) => {
+  res.sendFile('home.html', {
+    root: __dirname
+  });
+});
+app.get('/qr-load', (req, res) => {
   res.sendFile('index.html', {
     root: __dirname
   });
